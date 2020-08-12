@@ -40,7 +40,9 @@ async function getQuote() {
     quoteText.innerText = data.quoteText;
     //     stop loading spinner
     complete();
-  } catch (error) {}
+  } catch (error) {
+    getQuote()
+  }
 }
 // function for tweet
 function tweetQuote() {
